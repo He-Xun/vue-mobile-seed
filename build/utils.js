@@ -70,12 +70,17 @@ exports.cssLoaders = function (options) {
     less: generateLoaders('less'),
     // sass: generateLoaders('sass', {indentedSyntax: true}),
     // scss: generateLoaders('sass'),
-    sass: generateLoaders('sass', {
-      indentedSyntax: true,
-      includePaths: [path.resolve(__dirname, '../node_modules/compass-mixins/lib')]
+    sass: generateLoaders('sass').concat({
+      loader: 'sass-resources-loader',
+      options: {
+        resources: path.resolve(__dirname, '../node_modules/bourbon/core/_bourbon.scss')
+      }
     }),
-    scss: generateLoaders('sass', {
-      includePaths: [path.resolve(__dirname, '../node_modules/compass-mixins/lib')]
+    scss: generateLoaders('sass').concat({
+      loader: 'sass-resources-loader',
+      options: {
+        resources: path.resolve(__dirname, '../node_modules/bourbon/core/_bourbon.scss')
+      }
     }),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')

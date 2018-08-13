@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import home from '@/pages/home'
 import artical from '@/pages/artical'
 import about from '@/pages/about'
+import counter from '@/pages/counter'
 import notFoundPage from  '@/pages/notFoundPage'
 
 Vue.use(Router)
@@ -47,6 +48,14 @@ const router = new Router({
       meta: {
         keepalive: true,
         title: "关于"
+      }
+    },
+    {
+      path: '/counter',
+      name: 'counter',
+      component: counter,
+      meta: {
+        title: "计数器"
       }
     }
   ]

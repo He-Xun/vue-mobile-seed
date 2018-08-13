@@ -9,6 +9,9 @@
     <router-link :to="{path:'about'}">
       <button>about</button>
     </router-link>
+    <router-link :to="{path:'counter'}">
+      <button>counter</button>
+    </router-link>
   </div>
 </template>
 

@@ -1,0 +1,29 @@
+@charset "utf-8";
+@mixin hide-text {
+        overflow: hidden;
+        text-indent: 101%;
+        display: block;
+    }
+
+   //-----------------------------------边框阴影-----------------------------------------
+    //boxshadow:边框阴影
+    //例子：@include boxshadow(24,100%);
+    @mixin boxshadow($x: 3px, $y: 3px, $shadowcolor: #cccccc) {
+        -moz-box-shadow: $x $y 4px $shadowcolor; // FF3.5+
+        -webkit-box-shadow: $x $y 4px $shadowcolor; // Saf3.0+, Chrome
+        box-shadow: $x $y 4px $shadowcolor; // Opera 10.5, IE 9.0
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=#{$x}, OffY=#{$y}, Color='#{$shadowcolor}');
+        /* IE6,IE7 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=#{$x}, OffY=#{$y}, Color='#{$shadowcolor}')";
+        /* IE8 */
+    }
+
+
+
+       //-----------------------------------透明度-----------------------------------------
+    //引用例子:@include opacity(0.8);
+    @mixin opacity($opacity) {
+        opacity: $opacity;
+        $opacity-ie: $opacity * 100;
+        filter: alpha(opacity=$opacity-ie); //IE8
+    }

@@ -1,7 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import Vuex from 'vuex'
+import store from './store/index'
 //vuex 依赖babel-polyfill
 import 'babel-polyfill'
 import App from './App'
@@ -15,13 +15,12 @@ import axios from 'axios'
 import VueLazyload from 'vue-lazyload'
 
 import 'normalize.css'
-import './common/css/index.scss'
+// import './common/css/index.scss'
 import 'vue2-animate/dist/vue2-animate.css'
 
 
 Vue.config.productionTip = false;
 
-Vue.use(Vuex);
 //vue图片懒加载
 Vue.use(VueLazyload, {
   preLoad: 1.3,
@@ -40,6 +39,7 @@ Vue.prototype.$axios = axios;
 new Vue({
   el: '#app',
   router,
+  store,
   components: {App},
   template: '<App/>'
 });

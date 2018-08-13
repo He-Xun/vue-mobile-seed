@@ -31,10 +31,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
      在px后面添加/*no*/，不会转化px，会原样输出。 --- 一般border需用这个
      在px后面添加/*px*/,会根据dpr的不同，生成三套代码。---- 一般字体需用这个，dpr为1时chorme显示最小字体为12px，
 
-## scss compass:
-
-      webpack.base.conf.js 的alias 配置了      'compass': resolve('node_modules/compass-mixins/lib/compass/')
-      这样在vue单组件的style lang=“scss”标签中  就可以 @import ’~compass/layout‘ 这样方便的引用
+## scss bourbon:
+    用了sass-resources-loader 把bourbon全局引入
+    https://www.bourbon.io/
 
 
 ## vue-lazyload:
