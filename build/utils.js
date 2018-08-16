@@ -19,7 +19,8 @@ exports.cssLoaders = function (options) {
     loader: 'css-loader',
     options: {
       minimize: process.env.NODE_ENV === 'production',
-      sourceMap: options.sourceMap
+      sourceMap: options.sourceMap,
+      importLoaders: 2
     }
   }
 
@@ -33,7 +34,7 @@ exports.cssLoaders = function (options) {
   const px2remLoader = {
     loader: 'px2rem-loader',
     options: {
-      remUnit: 75,//设计稿除以10得到的值
+      remUnit: 37.5,//设计稿除以10得到的值
       baseDpr: 1,//默认dpr是2，设置成1，才能保证字体正常
     }
   }

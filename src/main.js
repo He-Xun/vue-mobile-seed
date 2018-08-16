@@ -15,8 +15,12 @@ import axios from 'axios'
 import VueLazyload from 'vue-lazyload'
 
 import 'normalize.css'
-// import './common/css/index.scss'
+import './common/css/index.scss'
 import 'vue2-animate/dist/vue2-animate.css'
+import 'mint-ui/lib/style.css'
+import MintUI from 'mint-ui'
+
+Vue.use(MintUI);
 
 
 Vue.config.productionTip = false;

@@ -26,14 +26,6 @@ const router = new Router({
       }
     },
     {
-      path: '/home',
-      name: 'home',
-      component: home,
-      meta: {
-        title: "首页"
-      }
-    },
-    {
       path: '/artical',
       name: 'artical',
       component: artical,

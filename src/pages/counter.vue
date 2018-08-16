@@ -9,15 +9,15 @@
 </template>
 
 <script>
-  import {mapState,mapMutations} from 'vuex'
+  import {mapState, mapMutations} from 'vuex'
 
   export default {
     name: "counter",
-    methods:{
-      ...mapMutations(["addCount","reduceCount","resetCount"])
+    methods: {
+      ...mapMutations(["addCount", "reduceCount", "resetCount"])
     },
     computed: {
-        ...mapState(["count"])
+      ...mapState(["count"])
     }
   }
 </script>
